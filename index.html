@@ -126,6 +126,46 @@
             font-size: 14px;
         }
 
+        
+        /* Social Media Buttons */
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 8px auto 16px;
+            flex-wrap: wrap;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+        }
+        .btn-insta {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-fb {
+            background: linear-gradient(45deg, #1877f2 0%, #0056b3 100%);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .social-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+
         /* Search & Controls */
         .controls-wrapper {
             position: sticky;
@@ -479,6 +519,18 @@
         </div>
         <h1 class="cafe-title">KAVA <span>COFFEE</span></h1>
         <div class="cafe-handle">@KAVA.CAFFEE • المنيو الإلكتروني</div>
+
+        <div class="social-bar">
+            <a href="https://www.instagram.com/kava.caffee?igsh=MXB4YmpvN3Q2eTZiYQ==" target="_blank" class="social-btn btn-insta">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>تابعنا على انستجرام</span>
+            </a>
+            <a href="https://www.facebook.com/share/p/17wXmBB3A5/" target="_blank" class="social-btn btn-fb">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>صفحتنا على فيسبوك</span>
+            </a>
+        </div>
+
         
         <div class="address-card">
             <div class="address-icon">📍</div>
@@ -552,29 +604,29 @@
             { id: 2, name: "قهوة محوج", cat: "coffee", priceS: 25, priceD: 30 },
             { id: 3, name: "قهوة محوج حليب", cat: "coffee", priceS: 35, priceD: null },
             { id: 4, name: "قهوة فرنساوي", cat: "coffee", priceS: 30, priceD: null },
-            { id: 5, name: "قهوة قرفة", cat: "coffee", priceS: 30, priceD: null },
-            { id: 6, name: "قهوة بندق", cat: "coffee", priceS: 35, priceD: null },
-            { id: 7, name: "قهوة نوتيلا", cat: "coffee", priceS: 40, priceD: null },
-            { id: 8, name: "اسبريسو", cat: "coffee", priceS: 30, priceD: 35 },
-            { id: 9, name: "أمريكانو", cat: "coffee", priceS: 40, priceD: null },
-            { id: 10, name: "اسبريسو ميكاتو", cat: "coffee", priceS: 40, priceD: 45 },
+            { id: 5, name: "قهوة قرفة", cat: "coffee", priceS: 40, priceD: null },
+            { id: 6, name: "قهوة بندق", cat: "coffee", priceS: 40, priceD: null },
+            { id: 7, name: "قهوة نوتيلا", cat: "coffee", priceS: 45, priceD: null },
+            { id: 8, name: "اسبريسو", cat: "coffee", priceS: 35, priceD: 50 },
+            { id: 9, name: "أمريكانو", cat: "coffee", price: 50 },
+            { id: 10, name: "اسبريسو ميكاتو", cat: "coffee", priceS: 45, priceD: 60 },
             { id: 11, name: "نسكافيه", cat: "coffee", price: 35 },
             { id: 12, name: "نسكافيه بلاك", cat: "coffee", price: 25 },
             { id: 13, name: "كوفي ميكس", cat: "coffee", price: 20 },
             { id: 14, name: "كوفي ميكس حليب", cat: "coffee", price: 30 },
 
-            // مشروبات الحليب وموكا (Milk Drinks & Mocha - Updated from system)
-            { id: 15, name: "كابتشينو", cat: "milk-coffee", price: 50 },
-            { id: 16, name: "كورتادو", cat: "milk-coffee", price: 45 },
-            { id: 17, name: "فلات وايت", cat: "milk-coffee", price: 55 },
-            { id: 18, name: "لاتيه", cat: "milk-coffee", price: 45 },
+            // مشروبات الحليب وموكا (Milk Drinks & Mocha)
+            { id: 15, name: "كابتشينو", cat: "milk-coffee", price: 70 },
+            { id: 16, name: "كورتادو", cat: "milk-coffee", price: 50 },
+            { id: 17, name: "فلات وايت", cat: "milk-coffee", price: 65 },
+            { id: 18, name: "لاتيه", cat: "milk-coffee", price: 60 },
             { id: 19, name: "لاتيه بندق / فانيلا / بيستاشيو", cat: "milk-coffee", price: 55 },
-            { id: 20, name: "لوتس بسكوف لاتيه", cat: "milk-coffee", price: 70 },
-            { id: 21, name: "سبانش لاتيه", cat: "milk-coffee", price: 55 },
+            { id: 20, name: "لوتس بيسكوف لاتيه", cat: "milk-coffee", price: 70 },
+            { id: 21, name: "سبانش لاتيه", cat: "milk-coffee", price: 70 },
             { id: 22, name: "موكا", cat: "milk-coffee", price: 70 },
-            { id: 23, name: "وايت موكا", cat: "milk-coffee", price: 55 },
+            { id: 23, name: "وايت موكا", cat: "milk-coffee", price: 70 },
 
-            // مشروبات باردة وآيس كوفي (Iced Coffee & Cold Drinks - Updated from system)
+            // آيس كوفي ومشروبات باردة (Iced Coffee & Cold Drinks)
             { id: 24, name: "آيس كوفي كلاسيك", cat: "iced-drinks", price: 65 },
             { id: 25, name: "آيس كوفي بيستاشيو", cat: "iced-drinks", price: 70 },
             { id: 26, name: "آيس كوفي شوكلت", cat: "iced-drinks", price: 65 },
@@ -584,113 +636,76 @@
             { id: 30, name: "آيس نسكافيه", cat: "iced-drinks", price: 50 },
             { id: 31, name: "آيس شوكولاتة", cat: "iced-drinks", price: 60 },
             { id: 32, name: "آيس كراميل ميكاتو", cat: "iced-drinks", price: 70 },
-            { id: 33, name: "آيس موكا", cat: "iced-drinks", price: 70 },
-            { id: 34, name: "آيس وايت موكا", cat: "iced-drinks", price: 70 },
-            { id: 35, name: "آيس سبانش لاتيه", cat: "iced-drinks", price: 70 },
-            { id: 36, name: "آيس أمريكانو", cat: "iced-drinks", price: 50 },
-            { id: 37, name: "آيس تي كلاسيك", cat: "iced-drinks", price: 40 },
-            { id: 38, name: "آيس تي (بيتش / راسبيري / ميكس / مانجو / أناناس / باشن / تفاح)", cat: "iced-drinks", price: 45 },
+            { id: 33, name: "آيس موكا / وايت موكا", cat: "iced-drinks", price: 70 },
+            { id: 34, name: "آيس سبانش لاتيه", cat: "iced-drinks", price: 70 },
+            { id: 35, name: "آيس أمريكانو", cat: "iced-drinks", price: 50 },
+            { id: 36, name: "آيس تي كلاسيك", cat: "iced-drinks", price: 40 },
+            { id: 37, name: "آيس تي فليفر (بيتش/راسبيرى/ميكس/مانجو/أناناس)", cat: "iced-drinks", price: 45 },
 
-            // فرابيه وسموزي (Frappe & Smoothie - Updated all frappes to 80)
-            { id: 39, name: "فرابيه كلاسيك", cat: "frappe-smoothie", price: 80 },
-            { id: 40, name: "فرابيه أوريو", cat: "frappe-smoothie", price: 80 },
-            { id: 41, name: "فرابيه كراميل", cat: "frappe-smoothie", price: 80 },
-            { id: 42, name: "فرابيه شوكلت", cat: "frappe-smoothie", price: 80 },
-            { id: 43, name: "فرابيه نوتيلا", cat: "frappe-smoothie", price: 80 },
-            { id: 44, name: "فرابيه بندق", cat: "frappe-smoothie", price: 80 },
-            { id: 45, name: "فرابيه لوتس", cat: "frappe-smoothie", price: 80 },
-            { id: 46, name: "فرابيه بيستاشيو", cat: "frappe-smoothie", price: 80 },
-            { id: 47, name: "سموزي جرين ابل", cat: "frappe-smoothie", price: 50 },
-            { id: 48, name: "سموزي ليمون مينت", cat: "frappe-smoothie", price: 50 },
-            { id: 49, name: "سموزي مانجو", cat: "frappe-smoothie", price: 50 },
-            { id: 50, name: "سموزي مانجو بطيخ", cat: "frappe-smoothie", price: 50 },
-            { id: 51, name: "سموزي بطيخ نعناع", cat: "frappe-smoothie", price: 50 },
-            { id: 52, name: "سموزي مانجا خوخ", cat: "frappe-smoothie", price: 50 },
-            { id: 53, name: "سموزي باشن فروت", cat: "frappe-smoothie", price: 50 },
-            { id: 54, name: "سموزي بلوبيري", cat: "frappe-smoothie", price: 50 },
-            { id: 55, name: "سموزي ميكس بيري", cat: "frappe-smoothie", price: 50 },
-            { id: 56, name: "سموزي خوخ", cat: "frappe-smoothie", price: 50 },
-            { id: 57, name: "سموزي بطيخ", cat: "frappe-smoothie", price: 50 },
-            { id: 58, name: "سموزي فراولة", cat: "frappe-smoothie", price: 50 },
-            { id: 59, name: "سموزي أناناس", cat: "frappe-smoothie", price: 50 },
+            // فرابيه وسموزي (Frappe & Smoothie)
+            { id: 38, name: "فرابيه كلاسيك", cat: "frappe-smoothie", price: 80 },
+            { id: 39, name: "فرابيه أوريو", cat: "frappe-smoothie", price: 80 },
+            { id: 40, name: "فرابيه كراميل", cat: "frappe-smoothie", price: 80 },
+            { id: 41, name: "فرابيه شوكلت", cat: "frappe-smoothie", price: 80 },
+            { id: 42, name: "فرابيه نوتيلا", cat: "frappe-smoothie", price: 80 },
+            { id: 43, name: "فرابيه بندق", cat: "frappe-smoothie", price: 80 },
+            { id: 44, name: "فرابيه لوتس", cat: "frappe-smoothie", price: 80 },
+            { id: 45, name: "فرابيه بيستاشيو", cat: "frappe-smoothie", price: 80 },
+            { id: 46, name: "سموزي جرين ابل", cat: "frappe-smoothie", price: 50 },
+            { id: 47, name: "سموزي ليمون مينت", cat: "frappe-smoothie", price: 50 },
+            { id: 48, name: "سموزي مانجو", cat: "frappe-smoothie", price: 50 },
+            { id: 49, name: "سموزي مانجو بطيخ / بطيخ نعناع", cat: "frappe-smoothie", price: 50 },
+            { id: 50, name: "سموزي مانجا خوخ / باشن فروت", cat: "frappe-smoothie", price: 50 },
+            { id: 51, name: "سموزي بلوبيري / ميكس بيري", cat: "frappe-smoothie", price: 50 },
+            { id: 52, name: "سموزي خوخ / بطيخ / فراولة / أناناس", cat: "frappe-smoothie", price: 50 },
 
-            // ميلك شيك (Milkshake - Updated from system)
-            { id: 60, name: "ميلك شيك كلاسيك", cat: "milkshake", price: 70 },
-            { id: 61, name: "ميلك شيك فانيلا", cat: "milkshake", price: 70 },
-            { id: 62, name: "ميلك شيك فراولة", cat: "milkshake", price: 75 },
-            { id: 63, name: "ميلك شيك مانجو", cat: "milkshake", price: 75 },
-            { id: 64, name: "ميلك شيك خوخ", cat: "milkshake", price: 75 },
-            { id: 65, name: "ميلك شيك أناناس", cat: "milkshake", price: 75 },
-            { id: 66, name: "ميلك شيك جرين أبل", cat: "milkshake", price: 75 },
-            { id: 67, name: "ميلك شيك باشن فروت", cat: "milkshake", price: 75 },
-            { id: 68, name: "ميلك شيك بطيخ", cat: "milkshake", price: 75 },
-            { id: 69, name: "ميلك شيك بطيخ نعناع", cat: "milkshake", price: 75 },
-            { id: 70, name: "ميلك شيك بلو بيري", cat: "milkshake", price: 75 },
-            { id: 71, name: "ميلك شيك كراميل", cat: "milkshake", price: 75 },
-            { id: 72, name: "ميلك شيك أوريو", cat: "milkshake", price: 80 },
-            { id: 73, name: "ميلك شيك لوتس", cat: "milkshake", price: 80 },
-            { id: 74, name: "ميلك شيك فستق / بستاشيو", cat: "milkshake", price: 80 },
-            { id: 75, name: "ميلك شيك ميكس بيري", cat: "milkshake", price: 80 },
-            { id: 76, name: "ميلك شيك ميكس شوكلت", cat: "milkshake", price: 80 },
-            { id: 77, name: "ميلك شيك نوتيلا", cat: "milkshake", price: 80 },
-            { id: 78, name: "ميلك شيك بلح", cat: "milkshake", price: 85 },
+            // ميلك شيك (Milkshake)
+            { id: 53, name: "ميلك شيك كلاسيك / فانيلا", cat: "milkshake", price: 70 },
+            { id: 54, name: "ميلك شيك فراولة / مانجو / خوخ / أناناس", cat: "milkshake", price: 75 },
+            { id: 55, name: "ميلك شيك جرين أبل / باشن فروت / بطيخ / كراميل", cat: "milkshake", price: 75 },
+            { id: 56, name: "ميلك شيك أوريو / لوتس / فستق / شوكلت / نوتيلا / ميكس بيري", cat: "milkshake", price: 80 },
+            { id: 57, name: "ميلك شيك بلح", cat: "milkshake", price: 85 },
 
             // موهيتو ميكس (Mojito Mix)
-            { id: 79, name: "موهيتو كلاسيك / بلوبيري / أناناس", cat: "mojito", price: 70 },
-            { id: 80, name: "موهيتو جرين أبل / ميكس بيري / فراولة", cat: "mojito", price: 70 },
-            { id: 81, name: "موهيتو مانجو / باشن فروت / بلوكارساو / شيري", cat: "mojito", price: 70 },
-            { id: 82, name: "موهيتو بلو هاواي / صن رايز / صن شاين", cat: "mojito", price: 80 },
+            { id: 58, name: "موهيتو كلاسيك / بلوبيري / أناناس / جرين أبل", cat: "mojito", price: 70 },
+            { id: 59, name: "موهيتو ميكس بيري / فراولة / مانجو / باشن فروت / شيري", cat: "mojito", price: 70 },
+            { id: 60, name: "موهيتو بلو هاواي / صن رايز / صن شاين", cat: "mojito", price: 80 },
 
-            // ركن السخن والشاي (Hot Drinks & Tea - Updated from system)
-            { id: 83, name: "شاي كلاسيك", cat: "hot-drinks", price: 15 },
-            { id: 84, name: "شاي فليفر", cat: "hot-drinks", price: 20 },
-            { id: 85, name: "شاي حليب", cat: "hot-drinks", price: 25 },
-            { id: 86, name: "شاي كرك", cat: "hot-drinks", price: 25 },
-            { id: 87, name: "شاي كرك حليب", cat: "hot-drinks", price: 35 },
-            { id: 88, name: "هوت شوكليت", cat: "hot-drinks", price: 50 },
-            { id: 89, name: "هوت شوكليت وايت", cat: "hot-drinks", price: 50 },
-            { id: 90, name: "هوت شوكليت (أوريو / نوتيلا / لوتس / بستاشيو)", cat: "hot-drinks", price: 50 },
-            { id: 91, name: "سحلب سادة", cat: "hot-drinks", price: 35 },
-            { id: 92, name: "سحلب مكسرات", cat: "hot-drinks", price: 40 },
-            { id: 93, name: "سحلب فواكه / مكسرات", cat: "hot-drinks", price: 55 },
-            { id: 94, name: "هوت سيدر", cat: "hot-drinks", price: 35 },
-            { id: 95, name: "فيتامين سي", cat: "hot-drinks", price: 50 },
-            { id: 96, name: "أعشاب دافئة", cat: "hot-drinks", price: 20 },
-            { id: 97, name: "ميكس أعشاب", cat: "hot-drinks", price: 35 },
+            // ركن السخن والشاي (Hot Drinks & Tea)
+            { id: 61, name: "شاي كلاسيك", cat: "hot-drinks", price: 15 },
+            { id: 62, name: "شاي فليفر", cat: "hot-drinks", price: 20 },
+            { id: 63, name: "شاي حليب / شاي كرك", cat: "hot-drinks", price: 25 },
+            { id: 64, name: "شاي كرك حليب", cat: "hot-drinks", price: 35 },
+            { id: 65, name: "هوت شوكليت (كلاسيك / وايت / أوريو / نوتيلا / لوتس)", cat: "hot-drinks", price: 50 },
+            { id: 66, name: "سحلب سادة", cat: "hot-drinks", price: 35 },
+            { id: 67, name: "سحلب مكسرات", cat: "hot-drinks", price: 40 },
+            { id: 68, name: "سحلب فواكه / مكسرات", cat: "hot-drinks", price: 55 },
+            { id: 69, name: "هوت سيدر", cat: "hot-drinks", price: 35 },
+            { id: 70, name: "فيتامين سي", cat: "hot-drinks", price: 50 },
+            { id: 71, name: "أعشاب دافئة", cat: "hot-drinks", price: 20 },
+            { id: 72, name: "ميكس أعشاب", cat: "hot-drinks", price: 35 },
 
-            // عصائر فريش وريدبول (Updated from system)
-            { id: 98, name: "عصير مانجو فريش", cat: "fresh-redbull", price: 60 },
-            { id: 99, name: "عصير برتقال فريش", cat: "fresh-redbull", price: 50 },
-            { id: 100, name: "بلح بالحليب", cat: "fresh-redbull", price: 60 },
-            { id: 101, name: "بلح مكسرات", cat: "fresh-redbull", price: 70 },
-            { id: 102, name: "عصير بطيخ فريش", cat: "fresh-redbull", price: 55 },
-            { id: 103, name: "موز باللبن", cat: "fresh-redbull", price: 55 },
-            { id: 104, name: "فراولة ساده", cat: "fresh-redbull", price: 45 },
-            { id: 105, name: "فراولة باللبن", cat: "fresh-redbull", price: 55 },
-            { id: 106, name: "جوافة ساده", cat: "fresh-redbull", price: 45 },
-            { id: 107, name: "جوافة باللبن", cat: "fresh-redbull", price: 55 },
-            { id: 108, name: "عصير ليمون فريش", cat: "fresh-redbull", price: 30 },
-            { id: 109, name: "عصير ليمون نعناع", cat: "fresh-redbull", price: 40 },
-            { id: 110, name: "كوكتيل فريش", cat: "fresh-redbull", price: 70 },
-            { id: 111, name: "زبادي عسل", cat: "fresh-redbull", price: 40 },
-            { id: 112, name: "زبادي بالفواكه", cat: "fresh-redbull", price: 60 },
-            { id: 113, name: "ريدبول إسبريسو", cat: "fresh-redbull", price: 135 },
-            { id: 114, name: "ريدبول باشن فروت / بلوكارساو", cat: "fresh-redbull", price: 115 },
-            { id: 115, name: "ريدبول شيري", cat: "fresh-redbull", price: 120 },
-            { id: 116, name: "ريدبول 3 ميكس", cat: "fresh-redbull", price: 150 },
-            { id: 117, name: "ريد بول سادة", cat: "fresh-redbull", price: 85 },
-            { id: 118, name: "شيري كولا", cat: "fresh-redbull", price: 60 },
-            { id: 119, name: "كانز (مياه غازية)", cat: "fresh-redbull", price: 30 },
-            { id: 120, name: "مياه صغيرة", cat: "fresh-redbull", price: 10 },
+            // عصائر فريش وريدبول (Fresh Juices & Red Bull)
+            { id: 73, name: "عصير مانجو فريش / بلح بالحليب / زبادي فواكه", cat: "fresh-redbull", price: 60 },
+            { id: 74, name: "عصير برتقال فريش", cat: "fresh-redbull", price: 50 },
+            { id: 75, name: "بلح مكسرات / كوكتيل فريش", cat: "fresh-redbull", price: 70 },
+            { id: 76, name: "موز باللبن / عصير بطيخ / فراولة باللبن / جوافة باللبن", cat: "fresh-redbull", price: 55 },
+            { id: 77, name: "فراولة ساده / جوافة ساده", cat: "fresh-redbull", price: 45 },
+            { id: 78, name: "عصير ليمون فريش", cat: "fresh-redbull", price: 30 },
+            { id: 79, name: "عصير ليمون نعناع / زبادي عسل", cat: "fresh-redbull", price: 40 },
+            { id: 80, name: "ريدبول إسبريسو", cat: "fresh-redbull", price: 135 },
+            { id: 81, name: "ريدبول باشن فروت / بلوكارساو", cat: "fresh-redbull", price: 115 },
+            { id: 82, name: "ريدبول شيري", cat: "fresh-redbull", price: 120 },
+            { id: 83, name: "ريدبول 3 ميكس", cat: "fresh-redbull", price: 150 },
+            { id: 84, name: "ريد بول سادة", cat: "fresh-redbull", price: 85 },
+            { id: 85, name: "شيري كولا", cat: "fresh-redbull", price: 60 },
+            { id: 86, name: "كانز (مياه غازية)", cat: "fresh-redbull", price: 30 },
+            { id: 87, name: "مياه صغيرة", cat: "fresh-redbull", price: 10 },
 
-            // الإكسترا والإضافات (Updated from system)
-            { id: 121, name: "اكسترا فليفر", cat: "extras", price: 15 },
-            { id: 122, name: "اكسترا قرفة", cat: "extras", price: 5 },
-            { id: 123, name: "اكسترا حليب", cat: "extras", price: 15 },
-            { id: 124, name: "اكسترا آيس كريم", cat: "extras", price: 20 },
-            { id: 125, name: "اكسترا إسبريسو", cat: "extras", price: 20 },
-            { id: 126, name: "اكسترا مكسرات", cat: "extras", price: 15 },
-            { id: 127, name: "اكسترا نوتيلا / لوتس / بستاشيو", cat: "extras", price: 20 }
+            // الإكسترا والإضافات (Extras)
+            { id: 88, name: "اكسترا فليفر / حليب / مكسرات", cat: "extras", price: 15 },
+            { id: 89, name: "اكسترا قرفة", cat: "extras", price: 5 },
+            { id: 90, name: "اكسترا آيس كريم / إسبريسو / نوتيلا / لوتس / بستاشيو", cat: "extras", price: 20 }
         ];
 
         const categoryNames = {
@@ -884,5 +899,5 @@
 
         renderMenu(menuData);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a169d3d19ba65368',t:'MTc4MzI5MDc2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
