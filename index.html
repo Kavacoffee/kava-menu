@@ -394,6 +394,17 @@
             color: var(--text-main);
         }
 
+        .category-note {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            background: rgba(212, 175, 55, 0.07);
+            border-right: 3px solid var(--gold-primary);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: -6px 0 14px;
+            line-height: 1.6;
+        }
+
         /* Coffee Beans Cards (بن كافا) */
         .menu-card.beans-card {
             background: linear-gradient(135deg, #2b211c 0%, var(--surface-card) 100%);
@@ -731,12 +742,12 @@
             { id: 87, name: "مياه صغيرة", cat: "fresh-redbull", price: 10 },
 
             // بن كافا - وزن 225 جرام (Kava Coffee Beans - 225g)
-            { id: 91, name: "سادة فاتح", cat: "beans", price: 140, desc: "بن كافا • وزن 225 جرام" },
-            { id: 92, name: "سادة وسط", cat: "beans", price: 145, desc: "بن كافا • وزن 225 جرام" },
-            { id: 93, name: "سادة غامق", cat: "beans", price: 155, desc: "بن كافا • وزن 225 جرام" },
-            { id: 94, name: "محوج فاتح", cat: "beans", price: 165, desc: "بن كافا • وزن 225 جرام" },
-            { id: 95, name: "محوج وسط", cat: "beans", price: 170, desc: "بن كافا • وزن 225 جرام" },
-            { id: 96, name: "محوج غامق", cat: "beans", price: 175, desc: "بن كافا • وزن 225 جرام" },
+            { id: 91, name: "بن سادة فاتح", cat: "beans", price: 140, desc: "بن كافا • وزن 225 جرام" },
+            { id: 92, name: "بن سادة وسط", cat: "beans", price: 145, desc: "بن كافا • وزن 225 جرام" },
+            { id: 93, name: "بن سادة غامق", cat: "beans", price: 155, desc: "بن كافا • وزن 225 جرام" },
+            { id: 94, name: "بن محوج فاتح", cat: "beans", price: 165, desc: "بن كافا • وزن 225 جرام" },
+            { id: 95, name: "بن محوج وسط", cat: "beans", price: 170, desc: "بن كافا • وزن 225 جرام" },
+            { id: 96, name: "بن محوج غامق", cat: "beans", price: 175, desc: "بن كافا • وزن 225 جرام" },
 
             // الإكسترا والإضافات (Extras)
             { id: 88, name: "اكسترا فليفر / حليب / مكسرات", cat: "extras", price: 15 },
@@ -755,6 +766,11 @@
             "fresh-redbull": "عصائر فريش وريدبول 🍊",
             "beans": "بن كافا (وزن 225 جرام) 🫘",
             "extras": "الإكسترا والإضافات ✨"
+        };
+
+        // ملاحظات توضيحية تظهر تحت عنوان القسم
+        const categoryNotes = {
+            "beans": "📦 أكياس بن محمص للبيع (تيك أواي) — وزن الكيس 225 جرام، مش مشروب."
         };
 
         let currentCategory = 'all';
@@ -785,6 +801,13 @@
                 header.className = 'category-header';
                 header.innerHTML = `<h2 class="category-title">${categoryNames[cat] || cat}</h2>`;
                 sec.appendChild(header);
+
+                if (categoryNotes[cat]) {
+                    const note = document.createElement('div');
+                    note.className = 'category-note';
+                    note.textContent = categoryNotes[cat];
+                    sec.appendChild(note);
+                }
 
                 const grid = document.createElement('div');
                 grid.className = 'items-grid';
