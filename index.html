@@ -411,6 +411,11 @@
             border-color: rgba(212, 175, 55, 0.35);
         }
 
+        .beans-card .price-tag {
+            font-size: 17px;
+            padding: 8px 18px;
+        }
+
         .weight-badge {
             display: inline-flex;
             align-items: center;
@@ -770,7 +775,7 @@
 
         // ملاحظات توضيحية تظهر تحت عنوان القسم
         const categoryNotes = {
-            "beans": "📦 أكياس بن محمص للبيع (تيك أواي) — وزن الكيس 225 جرام، مش مشروب."
+            "beans": "📦 بن كافا تيك أواي — وزن الكيس 225 جرام."
         };
 
         let currentCategory = 'all';
@@ -831,6 +836,16 @@
                                     <span class="size-label">دبل +</span>
                                     <span class="val">${item.priceD}</span>
                                 </div>` : ''}
+                            </div>
+                        `;
+                    } else if (item.cat === 'beans') {
+                        // أكياس البن: عرض السعر فقط بدون زرار إضافة لحاسبة الطلب
+                        priceHTML = `
+                            <div class="price-box">
+                                <div class="price-tag">
+                                    <span>${item.price}</span>
+                                    <span class="currency">جنيه</span>
+                                </div>
                             </div>
                         `;
                     } else {
