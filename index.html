@@ -394,6 +394,26 @@
             color: var(--text-main);
         }
 
+        /* Coffee Beans Cards (بن كافا) */
+        .menu-card.beans-card {
+            background: linear-gradient(135deg, #2b211c 0%, var(--surface-card) 100%);
+            border-color: rgba(212, 175, 55, 0.35);
+        }
+
+        .weight-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(212, 175, 55, 0.14);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            color: var(--gold-light);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 9px;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
         /* Bottom Sticky Order Bar */
         .order-bar {
             position: fixed;
@@ -551,7 +571,7 @@
     <!-- Search and Navigation Tabs -->
     <div class="controls-wrapper">
         <div class="search-box">
-            <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن مشروبك المفضل (لاتيه، فرابيه، ريدبول، ميلك شيك...)...">
+            <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن مشروبك المفضل (لاتيه، فرابيه، ريدبول، بن كافا...)...">
             <span class="search-icon">🔍</span>
         </div>
         <div class="categories-scroll" id="categoryTabs">
@@ -564,6 +584,7 @@
             <button class="cat-btn" onclick="filterCategory('mojito', this)">موهيتو ميكس 🍹</button>
             <button class="cat-btn" onclick="filterCategory('hot-drinks', this)">ركن السخن والشاي 🫖</button>
             <button class="cat-btn" onclick="filterCategory('fresh-redbull', this)">عصائر فريش وريدبول 🍊</button>
+            <button class="cat-btn" onclick="filterCategory('beans', this)">بن كافا (225 جرام) 🫘</button>
             <button class="cat-btn" onclick="filterCategory('extras', this)">الإكسترا والإضافات ✨</button>
         </div>
     </div>
@@ -709,6 +730,14 @@
             { id: 86, name: "كانز (مياه غازية)", cat: "fresh-redbull", price: 30 },
             { id: 87, name: "مياه صغيرة", cat: "fresh-redbull", price: 10 },
 
+            // بن كافا - وزن 225 جرام (Kava Coffee Beans - 225g)
+            { id: 91, name: "سادة فاتح", cat: "beans", price: 140, desc: "بن كافا • وزن 225 جرام" },
+            { id: 92, name: "سادة وسط", cat: "beans", price: 145, desc: "بن كافا • وزن 225 جرام" },
+            { id: 93, name: "سادة غامق", cat: "beans", price: 155, desc: "بن كافا • وزن 225 جرام" },
+            { id: 94, name: "محوج فاتح", cat: "beans", price: 165, desc: "بن كافا • وزن 225 جرام" },
+            { id: 95, name: "محوج وسط", cat: "beans", price: 170, desc: "بن كافا • وزن 225 جرام" },
+            { id: 96, name: "محوج غامق", cat: "beans", price: 175, desc: "بن كافا • وزن 225 جرام" },
+
             // الإكسترا والإضافات (Extras)
             { id: 88, name: "اكسترا فليفر / حليب / مكسرات", cat: "extras", price: 15 },
             { id: 89, name: "اكسترا قرفة", cat: "extras", price: 5 },
@@ -724,6 +753,7 @@
             "mojito": "موهيتو ميكس 🍹",
             "hot-drinks": "ركن السخن والشاي 🫖",
             "fresh-redbull": "عصائر فريش وريدبول 🍊",
+            "beans": "بن كافا (وزن 225 جرام) 🫘",
             "extras": "الإكسترا والإضافات ✨"
         };
 
@@ -761,7 +791,7 @@
 
                 catItems.forEach(item => {
                     const card = document.createElement('div');
-                    card.className = 'menu-card';
+                    card.className = item.cat === 'beans' ? 'menu-card beans-card' : 'menu-card';
 
                     let priceHTML = '';
                     let addBtnHTML = '';
@@ -792,10 +822,15 @@
                         `;
                     }
 
+                    const infoHTML = item.cat === 'beans'
+                        ? `<div class="item-name">${item.name}</div>
+                           <span class="weight-badge">🫘 وزن 225 جرام</span>`
+                        : `<div class="item-name">${item.name}</div>
+                           ${item.desc ? `<div class="item-desc">${item.desc}</div>` : ''}`;
+
                     card.innerHTML = `
                         <div class="item-info">
-                            <div class="item-name">${item.name}</div>
-                            ${item.desc ? `<div class="item-desc">${item.desc}</div>` : ''}
+                            ${infoHTML}
                         </div>
                         ${priceHTML}
                     `;
@@ -818,8 +853,10 @@
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const filtered = menuData.filter(item => {
                 const matchesCat = currentCategory === 'all' || item.cat === currentCategory;
+                const catLabel = (categoryNames[item.cat] || '').toLowerCase();
                 const matchesQuery = item.name.toLowerCase().includes(query) || 
-                                     (item.desc && item.desc.toLowerCase().includes(query));
+                                     (item.desc && item.desc.toLowerCase().includes(query)) ||
+                                     catLabel.includes(query);
                 return matchesCat && matchesQuery;
             });
             renderMenu(filtered);
